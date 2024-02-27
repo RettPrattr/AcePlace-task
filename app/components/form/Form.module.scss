@@ -1,0 +1,70 @@
+@import '../../styles/global.scss';
+
+
+.form {
+    padding: 30px 20px;
+    border-radius: 35px;
+    background-color: #fff;
+    width: 30%;
+    .eye-off, .eye {
+        position: absolute;
+        right: 20px;
+        top: 7px;
+        cursor: pointer;
+    }
+    .input-field {
+        position: relative;
+        margin-bottom: 20px;
+        border: 2px solid #D9DCE9;
+        border-radius: 10px;
+        input {
+            width: calc(100% - 14px);
+            height: 35px;
+            border: none;
+            outline: none;
+            margin-left: 10px;
+            font-size: 18px;
+            color: $textColor;
+            &:focus,
+            &:-webkit-autofill,
+            &:not(:placeholder-shown) {
+              & + label {
+                top: -17px;
+                font-size: 80%;
+              }
+            }
+            .invalid {
+                color: red !important;
+            }
+        }
+        label {
+            position: absolute;
+            transition: .1s all ease;
+            color: #D9DCE9;
+            left: 10px;
+            top: 10px;
+        }
+        
+    }
+    .title {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: $textColor;
+
+        }
+    }
+    .submit-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .form {
+        width: 100%;
+        margin: 0;
+    }
+}

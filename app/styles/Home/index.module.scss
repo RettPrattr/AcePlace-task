@@ -1,0 +1,9 @@
+@import '../../styles/global.scss';
+
+.index {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: $bcColor;
+}
